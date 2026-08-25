@@ -146,26 +146,26 @@ footer{background:#263238;color:white;text-align:center;padding:30px 7%}.small{f
 
 <section class="admission-section" id="admission">
   <h2>Admission Card Form</h2>
-  <p class="sub">Fill in the official details to apply for your child's admission.</p>
+  <p class="sub">Fill in the official details to submit your child's application via WhatsApp.</p>
   <div class="form-card">
-    <form action="https://formspree.io/f/xkjwlvak" method="POST">
+    <form id="whatsappForm">
       <div class="form-grid">
         
         <div class="form-section-title">👶 Child Details</div>
         
         <div class="form-group">
           <label for="child-name">Child's Full Name *</label>
-          <input type="text" id="child-name" name="Child Name" required placeholder="Full Name">
+          <input type="text" id="child-name" required placeholder="Full Name">
         </div>
 
         <div class="form-group">
           <label for="dob">Date of Birth *</label>
-          <input type="date" id="dob" name="Date of Birth" required>
+          <input type="date" id="dob" required>
         </div>
 
         <div class="form-group">
           <label for="age">Age (2–4 Years) *</label>
-          <select id="age" name="Age" required>
+          <select id="age" required>
             <option value="">Select Age</option>
             <option value="2 years">2 Years</option>
             <option value="2.5 years">2.5 Years</option>
@@ -177,7 +177,7 @@ footer{background:#263238;color:white;text-align:center;padding:30px 7%}.small{f
 
         <div class="form-group">
           <label for="gender">Gender *</label>
-          <select id="gender" name="Gender" required>
+          <select id="gender" required>
             <option value="">Select Gender</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
@@ -187,8 +187,8 @@ footer{background:#263238;color:white;text-align:center;padding:30px 7%}.small{f
 
         <div class="form-group">
           <label for="blood-group">Blood Group</label>
-          <select id="blood-group" name="Blood Group">
-            <option value="">Select Blood Group</option>
+          <select id="blood-group">
+            <option value="Not Specified">Select Blood Group</option>
             <option value="A+">A+</option>
             <option value="A-">A-</option>
             <option value="B+">B+</option>
@@ -202,7 +202,7 @@ footer{background:#263238;color:white;text-align:center;padding:30px 7%}.small{f
 
         <div class="form-group">
           <label for="timing">Preferred Timing *</label>
-          <select id="timing" name="Preferred Timing" required>
+          <select id="timing" required>
             <option value="">Select Timing</option>
             <option value="9:00 AM - 12:00 PM">9:00 AM – 12:00 PM (₹1,500/mo)</option>
             <option value="Half Day (9:00 AM - 1:00 PM)">Half Day: 9:00 AM – 1:00 PM (₹2,000/mo)</option>
@@ -214,53 +214,94 @@ footer{background:#263238;color:white;text-align:center;padding:30px 7%}.small{f
 
         <div class="form-group">
           <label for="parent-name">Parent / Guardian Name *</label>
-          <input type="text" id="parent-name" name="Parent Name" required placeholder="Parent/Guardian Name">
+          <input type="text" id="parent-name" required placeholder="Parent/Guardian Name">
         </div>
 
         <div class="form-group">
           <label for="phone">Primary Contact No. *</label>
-          <input type="tel" id="phone" name="Primary Contact" required placeholder="e.g., 7005698267">
+          <input type="tel" id="phone" required placeholder="e.g., 7005698267">
         </div>
 
         <div class="form-group full">
           <label for="address">Residential Address *</label>
-          <textarea id="address" name="Address" rows="2" required placeholder="Full Address"></textarea>
+          <textarea id="address" rows="2" required placeholder="Full Address"></textarea>
         </div>
 
         <div class="form-section-title">🚨 Emergency Contacts & Medical Info</div>
 
         <div class="form-group">
           <label for="emergency-1">Emergency Contact Person 1 *</label>
-          <input type="text" id="emergency-1" name="Emergency Contact 1 Name" required placeholder="Name & Relation">
+          <input type="text" id="emergency-1" required placeholder="Name & Relation">
         </div>
 
         <div class="form-group">
           <label for="emergency-phone-1">Contact No. 1 *</label>
-          <input type="tel" id="emergency-phone-1" name="Emergency Contact 1 Phone" required placeholder="Phone Number">
+          <input type="tel" id="emergency-phone-1" required placeholder="Phone Number">
         </div>
 
         <div class="form-group">
           <label for="emergency-2">Emergency Contact Person 2</label>
-          <input type="text" id="emergency-2" name="Emergency Contact 2 Name" placeholder="Name & Relation">
+          <input type="text" id="emergency-2" placeholder="Name & Relation">
         </div>
 
         <div class="form-group">
           <label for="emergency-phone-2">Contact No. 2</label>
-          <input type="tel" id="emergency-phone-2" name="Emergency Contact 2 Phone" placeholder="Phone Number">
+          <input type="tel" id="emergency-phone-2" placeholder="Phone Number">
         </div>
 
         <div class="form-group full">
           <label for="allergies">Any Allergies / Medical Conditions / Special Notes</label>
-          <textarea id="allergies" name="Allergies and Medical Notes" rows="3" placeholder="List any allergies, medications, or special instructions..."></textarea>
+          <textarea id="allergies" rows="3" placeholder="List any allergies, medications, or special instructions..."></textarea>
         </div>
 
       </div>
       <div style="text-align: center; margin-top: 25px;">
-        <button type="submit" class="btn primary" style="font-size: 16px; padding: 14px 40px;">Submit Admission Card Form 🚀</button>
+        <button type="submit" class="btn primary" style="font-size: 16px; padding: 14px 40px; background:#25D366; color:white;">Submit via WhatsApp 💬</button>
       </div>
     </form>
   </div>
 </section>
+
+<script>
+document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  var childName = document.getElementById('child-name').value;
+  var dob = document.getElementById('dob').value;
+  var age = document.getElementById('age').value;
+  var gender = document.getElementById('gender').value;
+  var bloodGroup = document.getElementById('blood-group').value;
+  var timing = document.getElementById('timing').value;
+  var parentName = document.getElementById('parent-name').value;
+  var phone = document.getElementById('phone').value;
+  var address = document.getElementById('address').value;
+  var emergency1 = document.getElementById('emergency-1').value;
+  var emergencyPhone1 = document.getElementById('emergency-phone-1').value;
+  var emergency2 = document.getElementById('emergency-2').value || 'N/A';
+  var emergencyPhone2 = document.getElementById('emergency-phone-2').value || 'N/A';
+  var allergies = document.getElementById('allergies').value || 'None';
+
+  var message = "📋 *NEW ADMISSION CARD APPLICATION*\n\n" +
+    "👶 *Child Details:*\n" +
+    "• Name: " + childName + "\n" +
+    "• DOB: " + dob + "\n" +
+    "• Age: " + age + "\n" +
+    "• Gender: " + gender + "\n" +
+    "• Blood Group: " + bloodGroup + "\n" +
+    "• Preferred Timing: " + timing + "\n\n" +
+    "👨‍👩‍👧 *Parent Details:*\n" +
+    "• Parent/Guardian: " + parentName + "\n" +
+    "• Phone: " + phone + "\n" +
+    "• Address: " + address + "\n\n" +
+    "🚨 *Emergency & Medical:*\n" +
+    "• Emergency Contact 1: " + emergency1 + " (" + emergencyPhone1 + ")\n" +
+    "• Emergency Contact 2: " + emergency2 + " (" + emergencyPhone2 + ")\n" +
+    "• Medical/Allergies: " + allergies;
+
+  var whatsappURL = "https://wa.me/917005698267?text=" + encodeURIComponent(message);
+  window.open(whatsappURL, '_blank');
+});
+</script>
 
 <section class="contact" id="contact">
   <h2>Come Visit Us</h2>
