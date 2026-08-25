@@ -6,7 +6,7 @@
 <title>Happy Kids Day Care | Moirang</title>
 <meta name="description" content="Happy Kids Day Care in Moirang, Bishnupur District. Safe, caring and joyful daycare for children aged 2–4 years.">
 <style>
-:root{--pink:#ff7f9f;--yellow:#ffd86b;--blue:#72c7ef;--green:#87d9a0;--ink:#263238;--cream:#fffaf2}
+:root{--pink:#ff7f9f;--yellow:#ffd86b;--blue:#72c7ef;--green:#87d9a0;--ink:#263238;--cream:#fffaf2;--red:#ff4d4d;--green-dark:#2e7d32}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
 nav{position:sticky;top:0;z-index:10;background:#fff;box-shadow:0 2px 14px #00000012;padding:14px 6%;display:flex;align-items:center;justify-content:space-between}
 .logo{font-weight:800;font-size:20px;color:#ff668c}.logo span{display:block;font-size:11px;color:#667;margin-top:-5px}
@@ -14,20 +14,42 @@ nav a{color:var(--ink);text-decoration:none;margin-left:22px;font-weight:700;fon
 .hero{padding:85px 7%;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;background:linear-gradient(135deg,#fff1f5,#fff8dc,#eaf8ff)}
 .badge{display:inline-block;background:#fff;border-radius:30px;padding:8px 15px;font-weight:700;color:#e95e82;box-shadow:0 4px 15px #0000000d}
 h1{font-size:clamp(42px,6vw,72px);line-height:1.02;margin:18px 0}.hero p{font-size:19px;max-width:620px}
-.btn{display:inline-block;padding:14px 22px;border-radius:30px;text-decoration:none;font-weight:800;margin:8px 8px 0 0}.primary{background:#ff6f95;color:white}.secondary{background:white;color:var(--ink);border:2px solid #eee}
+.btn{display:inline-block;padding:14px 22px;border-radius:30px;text-decoration:none;font-weight:800;margin:8px 8px 0 0;border:none;cursor:pointer}.primary{background:#ff6f95;color:white}.secondary{background:white;color:var(--ink);border:2px solid #eee}
 .illustration{min-height:330px;border-radius:42% 58% 55% 45%;background:linear-gradient(145deg,#ffe49a,#a9e5fa);display:flex;align-items:center;justify-content:center;font-size:120px;box-shadow:inset 0 0 0 12px #ffffff88,0 20px 40px #00000012}
 section{padding:70px 7%}h2{text-align:center;font-size:36px;margin:0 0 12px}.sub{text-align:center;color:#68757b;max-width:700px;margin:0 auto 38px}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:#fff;padding:28px;border-radius:24px;box-shadow:0 8px 25px #0000000a}.icon{font-size:42px}.card h3{margin:10px 0 5px}
 .info{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.fee{width:100%;border-collapse:collapse;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 8px 25px #0000000a}.fee th,.fee td{padding:16px;text-align:left;border-bottom:1px solid #eee}.fee th{background:#fff0f4}.note{background:#fff3c7;padding:22px;border-radius:20px}
+
+/* Rules & Guidelines Section */
+.rules-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:30px}
+.dos-box{background:#f0fff4;border:2px solid #b7eb8f;border-radius:20px;padding:25px}
+.donts-box{background:#fff1f0;border:2px solid #ffa39e;border-radius:20px;padding:25px}
+.dos-box h3{color:var(--green-dark);margin-top:0}.donts-box h3{color:var(--red);margin-top:0}
+.dos-box ul, .donts-box ul{padding-left:20px;margin:0}
+.dos-box li, .donts-box li{margin-bottom:10px}
+.safety-box{background:#e6f7ff;border:2px solid #91caff;border-radius:20px;padding:25px;margin-top:20px}
+.safety-box h3{color:#0958d9;margin-top:0}
+
+/* Form Styles */
+.admission-section{background:#fff7f9;border-top:1px solid #ffe3ec;border-bottom:1px solid #ffe3ec}
+.form-card{max-width:850px;margin:auto;background:#fff;padding:35px;border-radius:28px;box-shadow:0 10px 30px #0000000a}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form-section-title{grid-column:1/-1;font-weight:800;font-size:18px;color:#ff6f95;margin-top:15px;padding-bottom:6px;border-bottom:2px dashed #ffd86b}
+.form-group{display:flex;flex-direction:column}
+.form-group.full{grid-column:1/-1}
+.form-group label{font-weight:700;margin-bottom:6px;font-size:14px;color:#334155}
+.form-group input, .form-group select, .form-group textarea{padding:12px 16px;border:2px solid #e2e8f0;border-radius:12px;font-size:15px;font-family:inherit;outline:none;transition:border-color 0.2s}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus{border-color:#ff6f95}
+
 .contact{background:#eaf8ff}.contactbox{max-width:900px;margin:auto;background:#fff;padding:35px;border-radius:28px;display:grid;grid-template-columns:1fr 1fr;gap:30px}.contact a{color:#e65f83;font-weight:800;text-decoration:none}
 footer{background:#263238;color:white;text-align:center;padding:30px 7%}.small{font-size:13px;color:#9aa8ad}
-@media(max-width:800px){nav{padding:12px 5%}nav div:last-child{display:none}.hero{grid-template-columns:1fr;padding:60px 6%}.illustration{min-height:230px;font-size:90px}.cards,.info,.contactbox{grid-template-columns:1fr}section{padding:55px 6%}h2{font-size:30px}}
+@media(max-width:800px){nav{padding:12px 5%}nav div:last-child{display:none}.hero{grid-template-columns:1fr;padding:60px 6%}.illustration{min-height:230px;font-size:90px}.cards,.info,.contactbox,.form-grid,.rules-grid{grid-template-columns:1fr}section{padding:55px 6%}h2{font-size:30px}}
 </style>
 </head>
 <body>
 <nav>
   <div class="logo">🌈 Happy Kids Day Care<span>Safe • Caring • Joyful</span></div>
-  <div><a href="#about">About</a><a href="#programs">Programs</a><a href="#fees">Fees</a><a href="#contact">Contact</a></div>
+  <div><a href="#about">About</a><a href="#programs">Programs</a><a href="#fees">Fees</a><a href="#admission">Admission</a><a href="#contact">Contact</a></div>
 </nav>
 
 <header class="hero">
@@ -35,8 +57,8 @@ footer{background:#263238;color:white;text-align:center;padding:30px 7%}.small{f
     <span class="badge">👶 For children aged 2–4 years</span>
     <h1>A happy place to learn, play & grow.</h1>
     <p>Welcome to <b>Happy Kids Day Care</b> — a warm, caring and child-friendly space where little ones can learn through play, make friends and feel at home.</p>
-    <a class="btn primary" href="tel:7005698267">📞 Call Us</a>
-    <a class="btn secondary" href="#contact">📍 Find Us</a>
+    <a class="btn primary" href="#admission">📝 Apply for Admission</a>
+    <a class="btn secondary" href="tel:7005698267">📞 Call Us</a>
   </div>
   <div class="illustration">🧸🌈🧒</div>
 </header>
@@ -67,12 +89,176 @@ footer{background:#263238;color:white;text-align:center;padding:30px 7%}.small{f
   <div class="info">
     <table class="fee">
       <tr><th>Timing</th><th>Monthly Fee</th></tr>
-      <tr><td>9:00 AM – 12:00 PM</td><td>₹1,500</td></tr>
-      <tr><td>9:00 AM – 12:00 PM<br><b>Half Day</b></td><td>₹2,000</td></tr>
-      <tr><td>9:00 AM – 5:00 PM<br><b>Full Day</b></td><td>₹4,000</td></tr>
+      <tr><td>9:00 AM – 12:00 PM (Only Timing)</td><td>₹1,500</td></tr>
+      <tr><td>9:00 AM – 1:00 PM (Half Day)</td><td>₹2,000</td></tr>
+      <tr><td>9:00 AM – 5:00 PM (Full Day)</td><td>₹4,000</td></tr>
       <tr><td><b>Admission Fee</b></td><td><b>₹3,500</b></td></tr>
     </table>
-    <div class="note"><h3>📌 Important</h3><p>Please contact the centre for admission availability, required documents and any current admission information.</p><p><b>Age group:</b> 2–4 years</p><p><b>Working days:</b> Monday–Saturday</p></div>
+    <div class="note">
+      <h3>📌 Fee Terms</h3>
+      <p><b>Payment Date:</b> Fees are payable on or before the 5th of every month.</p>
+      <p><b>Age group:</b> 2–4 years</p>
+      <p><b>Working days:</b> Monday–Saturday (9:00 AM – 5:00 PM)</p>
+    </div>
+  </div>
+
+  <div style="margin-top:40px;">
+    <h2>Safety & Care Guidelines</h2>
+    <p class="sub">For the safety, care & happiness of every child</p>
+    
+    <div class="rules-grid">
+      <div class="dos-box">
+        <h3>✅ DO'S</h3>
+        <ul>
+          <li>Bring your child clean and neatly dressed.</li>
+          <li>Pack a labelled bag containing water bottle, healthy snacks/lunch, extra pair of clothes, diapers/wipes (if required), personal towel.</li>
+          <li>Inform staff about allergies, medical conditions, medication (written instructions required), emergency contact number.</li>
+          <li>Drop off and pick up your child on time.</li>
+          <li>Label all personal belongings.</li>
+          <li>Notify the centre if your child will be absent.</li>
+        </ul>
+      </div>
+
+      <div class="donts-box">
+        <h3>❌ DON'TS</h3>
+        <ul>
+          <li>Do not send your child if they have fever, vomiting, diarrhoea, contagious illness, severe cough or flu symptoms.</li>
+          <li>Do not send expensive jewellery, toys or valuables.</li>
+          <li>Do not send sharp objects, medicines (without written authorization) or unsafe food items.</li>
+          <li>Do not allow unauthorized persons to collect your child.</li>
+          <li>Do not bring your child after the scheduled admission time without informing the centre.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="safety-box">
+      <h3>🛡️ IMPORTANT SAFETY RULES & CARD INSTRUCTIONS</h3>
+      <ul>
+        <li>Children will only be released to authorized persons. Parents must sign the attendance register during drop-off and pick-up.</li>
+        <li>The admission card is mandatory during drop-off and pick-up. Keep the admission card safe (a replacement card may require a fee).</li>
+        <li>Any medication will only be administered with written parental consent and clear dosage instructions.</li>
+        <li>Parents must inform the centre immediately about any change in contact details or emergency contacts.</li>
+        <li>The centre reserves the right to verify the identity of anyone collecting the child.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="admission-section" id="admission">
+  <h2>Admission Card Form</h2>
+  <p class="sub">Fill in the official details to apply for your child's admission.</p>
+  <div class="form-card">
+    <form action="https://formspree.io/f/mqakvrbq" method="POST">
+      <div class="form-grid">
+        
+        <div class="form-section-title">👶 Child Details</div>
+        
+        <div class="form-group">
+          <label for="child-name">Child's Full Name *</label>
+          <input type="text" id="child-name" name="Child Name" required placeholder="Full Name">
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth *</label>
+          <input type="date" id="dob" name="Date of Birth" required>
+        </div>
+
+        <div class="form-group">
+          <label for="age">Age (2–4 Years) *</label>
+          <select id="age" name="Age" required>
+            <option value="">Select Age</option>
+            <option value="2 years">2 Years</option>
+            <option value="2.5 years">2.5 Years</option>
+            <option value="3 years">3 Years</option>
+            <option value="3.5 years">3.5 Years</option>
+            <option value="4 years">4 Years</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender *</label>
+          <select id="gender" name="Gender" required>
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="blood-group">Blood Group</label>
+          <select id="blood-group" name="Blood Group">
+            <option value="">Select Blood Group</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="timing">Preferred Timing *</label>
+          <select id="timing" name="Preferred Timing" required>
+            <option value="">Select Timing</option>
+            <option value="9:00 AM - 12:00 PM">9:00 AM – 12:00 PM (₹1,500/mo)</option>
+            <option value="Half Day (9:00 AM - 1:00 PM)">Half Day: 9:00 AM – 1:00 PM (₹2,000/mo)</option>
+            <option value="Full Day (9:00 AM - 5:00 PM)">Full Day: 9:00 AM – 5:00 PM (₹4,000/mo)</option>
+          </select>
+        </div>
+
+        <div class="form-section-title">👨‍👩‍👧 Parent & Address Details</div>
+
+        <div class="form-group">
+          <label for="parent-name">Parent / Guardian Name *</label>
+          <input type="text" id="parent-name" name="Parent Name" required placeholder="Parent/Guardian Name">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Primary Contact No. *</label>
+          <input type="tel" id="phone" name="Primary Contact" required placeholder="e.g., 7005698267">
+        </div>
+
+        <div class="form-group full">
+          <label for="address">Residential Address *</label>
+          <textarea id="address" name="Address" rows="2" required placeholder="Full Address"></textarea>
+        </div>
+
+        <div class="form-section-title">🚨 Emergency Contacts & Medical Info</div>
+
+        <div class="form-group">
+          <label for="emergency-1">Emergency Contact Person 1 *</label>
+          <input type="text" id="emergency-1" name="Emergency Contact 1 Name" required placeholder="Name & Relation">
+        </div>
+
+        <div class="form-group">
+          <label for="emergency-phone-1">Contact No. 1 *</label>
+          <input type="tel" id="emergency-phone-1" name="Emergency Contact 1 Phone" required placeholder="Phone Number">
+        </div>
+
+        <div class="form-group">
+          <label for="emergency-2">Emergency Contact Person 2</label>
+          <input type="text" id="emergency-2" name="Emergency Contact 2 Name" placeholder="Name & Relation">
+        </div>
+
+        <div class="form-group">
+          <label for="emergency-phone-2">Contact No. 2</label>
+          <input type="tel" id="emergency-phone-2" name="Emergency Contact 2 Phone" placeholder="Phone Number">
+        </div>
+
+        <div class="form-group full">
+          <label for="allergies">Any Allergies / Medical Conditions / Special Notes</label>
+          <textarea id="allergies" name="Allergies and Medical Notes" rows="3" placeholder="List any allergies, medications, or special instructions..."></textarea>
+        </div>
+
+      </div>
+      <div style="text-align: center; margin-top: 25px;">
+        <button type="submit" class="btn primary" style="font-size: 16px; padding: 14px 40px;">Submit Admission Card Form 🚀</button>
+      </div>
+    </form>
   </div>
 </section>
 
@@ -80,14 +266,22 @@ footer{background:#263238;color:white;text-align:center;padding:30px 7%}.small{f
   <h2>Come Visit Us</h2>
   <p class="sub">We would love to welcome you and your little one to Happy Kids Day Care.</p>
   <div class="contactbox">
-    <div><h3>📍 Address</h3><p>Moirang Mayai Leikai,<br>Bishnupur District,<br>Manipur – 795133</p></div>
-    <div><h3>📞 Contact</h3><p><a href="tel:7005698267">7005698267</a></p><p><b>Hours:</b> Monday–Saturday, 9:00 AM–5:00 PM</p><a class="btn primary" href="https://wa.me/917005698267">💬 WhatsApp Us</a></div>
+    <div>
+      <h3>📍 Address</h3>
+      <p>Moirang Mayai Leikai, PO/PS Moirang,<br>Bishnupur District, Manipur – 795133</p>
+    </div>
+    <div>
+      <h3>📞 Contact</h3>
+      <p><a href="tel:7005698267">7005698267</a> (Crèche Helpline)</p>
+      <p><b>Hours:</b> Monday–Saturday, 9:00 AM–5:00 PM</p>
+      <a class="btn primary" href="https://wa.me/917005698267">💬 WhatsApp Us</a>
+    </div>
   </div>
 </section>
 
 <footer>
   <div>🌈 <b>Happy Kids Day Care</b></div>
-  <div class="small">Moirang Mayai Leikai, Bishnupur District, Manipur – 795133</div>
+  <div class="small">Moirang Mayai Leikai, PO/PS Moirang, Bishnupur District – 795133</div>
   <div class="small">© 2026 Happy Kids Day Care. All rights reserved.</div>
 </footer>
 </body>
